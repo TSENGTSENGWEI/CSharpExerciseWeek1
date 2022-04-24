@@ -32,15 +32,15 @@ static float FindMax(float value1, float value2, float value3)
 
 static float[] SortArrary(float[] arr)
 {
-    for (int forout = 1; forout < arr.Length; forout++)
+    for (int forout = 0; forout < arr.Length; forout++)
     {
-        for (int forin = forout; forin < arr.Length; forin++)
+        for (int forin = forout + 1; forin < arr.Length; forin++)
         {
-            if (arr[forout - 1] > arr[forin])
+            if (arr[forout] > arr[forin])
             {
                 var temp = arr[forin];
-                arr[forin] = arr[forout - 1];
-                arr[forout - 1] = temp;
+                arr[forin] = arr[forout];
+                arr[forout] = temp;
             }
         }
     }
